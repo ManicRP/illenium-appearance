@@ -115,6 +115,7 @@ function InitializeCharacter(gender, onSubmit, onCancel)
         if (appearance) then
             TriggerServerEvent("illenium-appearance:server:saveAppearance", appearance)
             if onSubmit then
+                TriggerClientEvent("hud:client:StartHud", source)
                 onSubmit()
             end
         elseif onCancel then
